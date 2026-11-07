@@ -1,16 +1,54 @@
-# React + Vite
+# ⚡ Pokédex App - Taller Práctico React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web interactiva desarrollada con **React** y **Vite** que consume en tiempo real la [PokéAPI](https://pokeapi.co/), implementando gestión de estados asíncronos (carga y error), renderizado modular y filtrado local dinámico.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Características
 
-## React Compiler
+- **Consumo de API REST:** Petición asíncrona del catálogo inicial (20 Pokémon) y consulta individual de detalles (sprites, número de Pokédex, tipos y estadísticas base).
+- **Filtrado en tiempo real:** Búsqueda instantánea por nombre sin recargas de página.
+- **Gestión de estados:** Indicadores visuales durante la carga (`loading`) y captura de excepciones (`error`).
+- **Arquitectura modular:** Separación limpia entre capas de presentación (`src/components/`) y servicios de red (`src/services/`).
+- **Variables de entorno:** Configuración segura de endpoints mediante prefijo `VITE_`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **React 19**
+- **Vite**
+- **Axios**
+- **JavaScript (ES6+)**
+- **CSS en línea**
+
+---
+
+## ⚙️ Instalación y ejecución local
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/PortillaVanya/Pok-dex.git
+   cd Pok-dex
+   ```
+
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Configurar variables de entorno:
+   Crear un archivo `.env` en la raíz con el siguiente contenido:
+   ```env
+   VITE_POKEAPI_URL=https://pokeapi.co/api/v2
+   ```
+
+4. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+5. Compilar para producción:
+   ```bash
+   npm run build
+   ```
